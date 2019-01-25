@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+>
+
+
+    <androidx.recyclerview.widget.RecyclerView android:layout_width="400dp"
+                                               android:layout_height="400dp"
+                                               android:id="@+id/colors_rv"
+                                               android:background="@color/colorAccent"
+                                               android:layout_centerInParent="true"
+    >
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <!--<com.ogaclejapan.arclayout.ArcLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:arc_origin="bottom|right"-->
+    <!--app:arc_color="#4D000000"-->
+    <!--app:arc_radius="300dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:id="@+id/arc_layout"-->
+    <!--android:elevation="10dp"-->
+    <!--tools:targetApi="lollipop">-->
+    <!--<ImageView-->
+    <!--android:layout_width="48dp"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:src="@drawable/ic_get_app_black_24dp"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="48dp"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:src="@drawable/ic_highlight_black_24dp"-->
+    <!--/>-->
+    <!--<ImageView-->
+    <!--android:layout_width="48dp"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:src="@drawable/ic_insert_link_black_24dp"-->
+    <!--/>-->
+    <!--<ImageView-->
+    <!--android:layout_width="48dp"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:src="@drawable/ic_local_pizza_black_24dp"-->
+    <!--/>-->
+
+    <!--</com.ogaclejapan.arclayout.ArcLayout>-->
+
+</RelativeLayout>
