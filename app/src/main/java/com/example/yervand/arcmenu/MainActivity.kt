@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.leochuan.CircleLayoutManager
-import com.leochuan.CircleLayoutManager.BOTTOM_RIGHT
 import com.ogaclejapan.arclayout.ArcLayout
 import kotlin.random.Random
 
@@ -25,10 +24,9 @@ class MainActivity : AppCompatActivity() {
     private fun initColorListRecyclerView() {
         colorListRecyclerView = findViewById(R.id.colors_rv)
         val manager = CircleLayoutManager.Builder(this)
-            .setRadius(800)
-            .setAngleInterval(10)
-            .setGravity(BOTTOM_RIGHT)
-            .setDistanceToBottom(800)
+            .setRadius(400)
+            .setAngleInterval(25)
+            .setGravity(CircleLayoutManager.LEFT)
             .build()
 
         manager.moveSpeed = (5F * 0.005F)
@@ -57,13 +55,13 @@ class MainActivity : AppCompatActivity() {
 }
 
 fun convertPixelsToDp(px: Float): Float {
-    val metrics = Resources.getSystem().getDisplayMetrics()
+    val metrics = Resources.getSystem().displayMetrics
     val dp = px / (metrics.densityDpi / 160f)
     return Math.round(dp).toFloat()
 }
 
 fun convertDpToPixel(dp: Float): Float {
-    val metrics = Resources.getSystem().getDisplayMetrics()
+    val metrics = Resources.getSystem().displayMetrics
     val px = dp * (metrics.densityDpi / 160f)
     return Math.round(px).toFloat()
 }

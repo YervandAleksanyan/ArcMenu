@@ -52,7 +52,7 @@ public class CircleLayoutManager extends ViewPagerLayoutManager {
     private CircleLayoutManager(Context context, int radius, int angleInterval, float moveSpeed,
                                 float max, float min, int gravity, int zAlignment, boolean flipRotate,
                                 int maxVisibleItemCount, int distanceToBottom, boolean reverseLayout) {
-        super(context, (gravity == LEFT || gravity == RIGHT || gravity==BOTTOM_RIGHT) ? VERTICAL : HORIZONTAL, reverseLayout);
+        super(context, (gravity == LEFT || gravity == RIGHT || gravity == BOTTOM_RIGHT) ? VERTICAL : HORIZONTAL, reverseLayout);
         setEnableBringCenterToFront(true);
         setMaxVisibleItemCount(maxVisibleItemCount);
         setDistanceToBottom(distanceToBottom);
