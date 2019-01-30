@@ -191,8 +191,8 @@ public class CircleLayoutManager extends ViewPagerLayoutManager {
             case TOP:
             case BOTTOM:
             case BOTTOM_RIGHT:
-                int res = (int) (radius - radius * Math.sin(Math.toRadians(90 - targetOffset)));
-                Log.i("tag", "TOP" + res);
+                int res = (int) (radius - radius * Math.sin(Math.toRadians(targetOffset))) / 2;
+                Log.i("tag", "LEFT" + res);
                 return res;
             default:
                 return (int) (radius * Math.cos(Math.toRadians(90 - targetOffset)));
@@ -210,7 +210,7 @@ public class CircleLayoutManager extends ViewPagerLayoutManager {
                 return (int) (radius * Math.sin(Math.toRadians(90 - targetOffset)) - radius);
             case BOTTOM:
             case BOTTOM_RIGHT:
-                int res = (int) (radius + radius * Math.cos(Math.toRadians(90 - targetOffset)));
+                int res = (int) (radius - radius * Math.cos(Math.toRadians(targetOffset))) / 2;
                 Log.i("tag", "TOP" + res);
                 return res;
 //                return (int) (radius - radius * Math.sin(Math.toRadians(90 - targetOffset)));

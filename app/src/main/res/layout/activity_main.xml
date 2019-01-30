@@ -4,13 +4,17 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
->
+        tools:context=".MainActivity">
 
 
-    <androidx.recyclerview.widget.RecyclerView android:layout_width="400dp"
-                                               android:layout_height="400dp"
+    <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                               android:layout_height="match_parent"
                                                android:id="@+id/colors_rv"
+                                               android:layout_marginStart="150dp"
+                                               android:layout_marginLeft="150dp"
+                                               android:layout_marginTop="150dp"
+                                               android:layout_alignParentRight="true"
+                                               android:layout_alignParentBottom="true"
                                                android:background="@color/colorAccent"
                                                android:layout_centerInParent="true"
     >

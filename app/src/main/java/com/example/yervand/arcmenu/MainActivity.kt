@@ -24,12 +24,13 @@ class MainActivity : AppCompatActivity() {
     private fun initColorListRecyclerView() {
         colorListRecyclerView = findViewById(R.id.colors_rv)
         val manager = CircleLayoutManager.Builder(this)
-            .setRadius(400)
-            .setAngleInterval(25)
-            .setGravity(CircleLayoutManager.LEFT)
+            .setRadius(convertDpToPixel(150F).toInt())
+            .setAngleInterval(20)
+            .setDistanceToBottom(convertDpToPixel(150F).toInt())
+            .setGravity(CircleLayoutManager.BOTTOM_RIGHT)
             .build()
 
-        manager.moveSpeed = (5F * 0.005F)
+        manager.moveSpeed = (10F * 0.005F)
         colorListRecyclerView.layoutManager = manager
         manager.infinite = true
     }

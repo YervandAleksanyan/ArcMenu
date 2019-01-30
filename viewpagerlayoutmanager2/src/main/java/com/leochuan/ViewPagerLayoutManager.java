@@ -3,12 +3,13 @@ package com.leochuan;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -686,7 +687,6 @@ public abstract class ViewPagerLayoutManager extends LinearLayoutManager {
                 positionCache.put(i, scrap);
             }
         }
-
         currentFocusView.requestFocus();
     }
 
@@ -725,6 +725,8 @@ public abstract class ViewPagerLayoutManager extends LinearLayoutManager {
             layoutDecorated(scrap, mSpaceMain + left, mSpaceInOther + top,
                     mSpaceMain + left + mDecoratedMeasurement, mSpaceInOther + top + mDecoratedMeasurementInOther);
         }
+        Log.i("tag", "Right" + mSpaceMain + left + mDecoratedMeasurement);
+        Log.i("tag", "Bottom" + mSpaceInOther + top + mDecoratedMeasurementInOther);
         setItemViewProperty(scrap, targetOffset);
     }
 
