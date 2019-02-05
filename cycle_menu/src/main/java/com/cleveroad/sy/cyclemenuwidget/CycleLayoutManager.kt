@@ -118,7 +118,7 @@ class CycleLayoutManager(context: Context, corner: CORNER) : RecyclerView.Layout
         } else 0.0
 
     /**
-     * @return true if count pof item availabkle to scroll
+     * @return true if count pof item available to scroll
      */
     val isCountOfItemsAvailableToScroll: Boolean
         get() = mScrollIsAvailableDueToChildrenCount == null || mScrollIsAvailableDueToChildrenCount!!

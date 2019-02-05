@@ -506,6 +506,15 @@ class CycleMenuWidget : ViewGroup {
     }
 
     /**
+     * Set image for corner image button
+     *
+     * @param cornerImageDrawable resource to drawable
+     */
+    fun setCornerImagevisibility(visibility: Int) {
+        mCenterImage!!.visibility = visibility
+    }
+
+    /**
      * Set image resource for corner image button
      *
      * @param drawableRes resource to drawable
@@ -1157,7 +1166,7 @@ class CycleMenuWidget : ViewGroup {
 
     companion object {
 
-        val UNDEFINED_ANGLE_VALUE = -1000
+        const val UNDEFINED_ANGLE_VALUE = -1000
         private val CENTER_IMAGE_ROTATE_DURATION = 300
         private val REVEAL_ANIMATION_DURATION = 200
         private val RIPPLE_REVEAL_DURATION = 300
