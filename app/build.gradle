@@ -36,4 +36,6 @@ dependencies {
     implementation 'com.github.cdflynn:turn-layout-manager:v1.2'
     implementation 'com.github.kapil93:circular-layout-manager:1.0.0'
     implementation project(':viewpagerlayoutmanager2')
+    implementation 'com.github.kapil93:circular-layout-manager:1.0.0'
+    implementation project(':cycle_menu')
 }

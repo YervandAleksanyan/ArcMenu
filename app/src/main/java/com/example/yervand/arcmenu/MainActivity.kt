@@ -4,15 +4,17 @@ import android.content.res.Resources
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
-import com.leochuan.CircleLayoutManager
+import com.cleveroad.sy.cyclemenuwidget.CycleMenuItem
+import com.cleveroad.sy.cyclemenuwidget.CycleMenuWidget
+import com.kapil.circularlayoutmanager.CircularLayoutManager
 import com.ogaclejapan.arclayout.ArcLayout
 import kotlin.random.Random
 
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var colorListRecyclerView: RecyclerView
+    //    private lateinit var colorListRecyclerView: RecyclerView
+    private lateinit var cycleWidget: CycleMenuWidget
     private lateinit var arcLayout: ArcLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,29 +23,32 @@ class MainActivity : AppCompatActivity() {
         initColorListAdapter()
     }
 
-    private fun initColorListRecyclerView() {
-        colorListRecyclerView = findViewById(R.id.colors_rv)
-        val manager = CircleLayoutManager.Builder(this)
-            .setRadius(convertDpToPixel(150F).toInt())
-            .setAngleInterval(20)
-            .setDistanceToBottom(convertDpToPixel(150F).toInt())
-            .setGravity(CircleLayoutManager.BOTTOM_RIGHT)
-            .build()
 
-        manager.moveSpeed = (10F * 0.005F)
-        colorListRecyclerView.layoutManager = manager
-        manager.infinite = true
+    private fun initColorListRecyclerView() {
+//        colorListRecyclerView = findViewById(R.id.colors_rv)
+        cycleWidget = findViewById(R.id.itemCycleMenuWidget)
+//        val menu  = MenuInflater(this).inflate(R.menu.menu,menu)
+//        cycleWidget.setMenu()
+//        cycleWidget.setMenuItems(getColorsDataSet())
+        cycleWidget.setMenuRes(R.menu.menu)
+//        val manager = com.leochuan.other.CircleLayoutManager(this)
+//        manager.radius = 600
+//        manager.setDegreeRangeWillShow(270, 0)
+//        manager.contentOffsetY = 300
+//        manager.intervalAngle = 100
+        val manager = CircularLayoutManager(this, 200, 0)
+//        colorListRecyclerView.layoutManager = manager
     }
 
     private fun initColorListAdapter() {
-        val adapter = ColorListAdapter(getColorsDataSet())
-        colorListRecyclerView.adapter = adapter
+//        val adapter = ColorListAdapter(getColorsDataSet())
+//        colorListRecyclerView.adapter = adapter
     }
 
-    private fun getColorsDataSet(): List<Int> {
-        val list = ArrayList<Int>()
+    private fun getColorsDataSet(): List<CycleMenuItem> {
+        val list = ArrayList<CycleMenuItem>()
         repeat(50) {
-            list += generateRandomColor()
+            list += CycleMenuItem(generateRandomColor())
         }
 
         return list

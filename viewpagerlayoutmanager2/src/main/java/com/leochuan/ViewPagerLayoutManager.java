@@ -27,7 +27,7 @@ public abstract class ViewPagerLayoutManager extends LinearLayoutManager {
 
     public static final int HORIZONTAL = OrientationHelper.HORIZONTAL;
 
-    public static final int VERTICAL = OrientationHelper.VERTICAL;
+    public static final int VERTICAfaL = OrientationHelper.VERTICAL;
 
     private static final int DIRECTION_NO_WHERE = -1;
 
@@ -371,7 +371,6 @@ public abstract class ViewPagerLayoutManager extends LinearLayoutManager {
             mOffset = 0;
             return;
         }
-
         ensureLayoutState();
         resolveShouldLayoutReverse();
 
@@ -486,7 +485,6 @@ public abstract class ViewPagerLayoutManager extends LinearLayoutManager {
      * You can set up your own properties here or change the exist properties like mSpaceMain and mSpaceInOther
      */
     protected void setUp() {
-
     }
 
     private float getProperty(int position) {
@@ -721,9 +719,6 @@ public abstract class ViewPagerLayoutManager extends LinearLayoutManager {
         if (mOrientation == VERTICAL) {
             layoutDecorated(scrap, mSpaceInOther + left, mSpaceMain + top,
                     mSpaceInOther + left + mDecoratedMeasurementInOther, mSpaceMain + top + mDecoratedMeasurement);
-        } else {
-            layoutDecorated(scrap, mSpaceMain + left, mSpaceInOther + top,
-                    mSpaceMain + left + mDecoratedMeasurement, mSpaceInOther + top + mDecoratedMeasurementInOther);
         }
         Log.i("tag", "Right" + mSpaceMain + left + mDecoratedMeasurement);
         Log.i("tag", "Bottom" + mSpaceInOther + top + mDecoratedMeasurementInOther);

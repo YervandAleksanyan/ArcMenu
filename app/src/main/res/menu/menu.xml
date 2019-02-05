@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <item
+            android:id="@+id/new_game"
+            android:icon="@drawable/ic_local_pizza_black_24dp"
+            tools:ignore="MenuTitle"/>
+    <item
+            android:id="@+id/test2"
+            android:icon="@drawable/ic_local_pizza_black_24dp"
+            android:title="test2"/>
+
+    <item
+            android:id="@+id/test3"
+            android:icon="@drawable/ic_local_pizza_black_24dp"
+            android:title="test3"/>
+    <item
+            android:id="@+id/test4"
+            android:icon="@drawable/ic_local_pizza_black_24dp"
+            android:title="test4"/>
+
+    <item
+            android:id="@+id/test5"
+            android:icon="@drawable/ic_local_pizza_black_24dp"
+            android:title="test5"/>
+
+    <item
+            android:id="@+id/test6"
+            android:icon="@drawable/ic_local_pizza_black_24dp"
+            android:title="test6"/>
+
+    <item
+            android:id="@+id/test7"
+            android:icon="@drawable/ic_local_pizza_black_24dp"
+            android:title="test7"/>
+
+    <item
+            android:id="@+id/test8"
+            android:icon="@drawable/ic_local_pizza_black_24dp"
+            android:title="test8"/>
+</menu>

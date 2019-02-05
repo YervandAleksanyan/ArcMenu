@@ -139,6 +139,7 @@ public class CircleLayoutManager extends ViewPagerLayoutManager {
         this.gravity = gravity;
         if (gravity == LEFT || gravity == RIGHT) {
             setOrientation(VERTICAL);
+
         } else {
             setOrientation(HORIZONTAL);
         }
@@ -191,7 +192,7 @@ public class CircleLayoutManager extends ViewPagerLayoutManager {
             case TOP:
             case BOTTOM:
             case BOTTOM_RIGHT:
-                int res = (int) (radius - radius * Math.sin(Math.toRadians(targetOffset))) / 2;
+                int res = (int) (radius - radius * Math.sin(Math.toRadians(targetOffset)));
                 Log.i("tag", "LEFT" + res);
                 return res;
             default:
@@ -210,7 +211,7 @@ public class CircleLayoutManager extends ViewPagerLayoutManager {
                 return (int) (radius * Math.sin(Math.toRadians(90 - targetOffset)) - radius);
             case BOTTOM:
             case BOTTOM_RIGHT:
-                int res = (int) (radius - radius * Math.cos(Math.toRadians(targetOffset))) / 2;
+                int res = (int) (radius - radius * Math.cos(Math.toRadians(targetOffset)));
                 Log.i("tag", "TOP" + res);
                 return res;
 //                return (int) (radius - radius * Math.sin(Math.toRadians(90 - targetOffset)));
