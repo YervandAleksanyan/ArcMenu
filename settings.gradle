@@ -1,1 +1,1 @@
-include ':app', ':viewpagerlayoutmanager2', ':cycle_menu'
+include ':app', ':cycle_menu'
